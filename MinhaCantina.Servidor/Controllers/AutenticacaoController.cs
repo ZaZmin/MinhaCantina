@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using MinhaCantina.Biblioteca.Dtos;
 using MinhaCantina.Biblioteca.Modelos;
 using MinhaCantina.Servidor.Dados;
 
@@ -75,24 +75,4 @@ public class AutenticacaoController(MinhaCantinaContexto contextoCantina) : Cont
 
 		return StatusCode(201, respostaDto);
 	}
-}
-
-public class UsuarioRegistroDto
-{
-	public string Nome { get; set; } = string.Empty;
-	public string Senha { get; set; } = string.Empty;
-	public string Username { get; set; } = string.Empty;
-}
-
-public class UsuarioRespostaDto
-{
-	public int Id { get; set; }
-	public string Nome { get; set; } = string.Empty;
-	public string Username { get; set; } = string.Empty;
-}
-
-public class UsuarioLoginDto
-{
-	public string Username { get; set; } = string.Empty;
-	public string Senha { get; set; } = string.Empty;
 }
